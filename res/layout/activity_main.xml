@@ -9,8 +9,47 @@
     tools:context=".MainActivity" >
 
     <TextView
+        android:id="@+id/QuestionTextView"
         android:layout_width="wrap_content"
+        android:text="QuestionView"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/AnswerButton"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hello_world" />
+        android:layout_alignLeft="@+id/AnswerText"
+        android:layout_below="@+id/AnswerText"
+        android:text="CheckAnswer" />
+
+    <EditText
+        android:id="@+id/AnswerText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/QuestionTextView"
+        android:layout_below="@+id/QuestionTextView"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="AnswerText" />
+
+    <EditText
+        android:id="@+id/AnswerTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/AnswerButton"
+        android:layout_below="@+id/AnswerButton"
+        android:ems="10"
+        android:text="AnswerTextView" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/QuestionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/AnswerTextView"
+        android:layout_below="@+id/AnswerTextView"
+        android:text="Show Next Question" />
 
 </RelativeLayout>
