@@ -56,7 +56,8 @@ public void showQuestion()     {
 	currentQuestion++;
 	if(currentQuestion == questions.length)       currentQuestion =0; 
 	questionView.setText(questions[currentQuestion]); 
-	answerView.setText("");      answerText.setText("");  
+	answerView.setText("");      
+	answerText.setText("");  
 	}     
 /*      * This method return true if the answer equals to correct answer      
  * *  (Ignoring case)      
