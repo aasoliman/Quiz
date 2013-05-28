@@ -29,7 +29,7 @@ public class MainActivity extends Activity {
 	}
 	
 	public void init()     {      
-		questions = new String[]{" 1) What is the capital of Egypt?", " 2) What class are you in right now?"};
+		questions = new String[]{" 1- What is the capital of Egypt?", " 2- What class are you in right now?"};
 		answers = new String[]{"Cairo","IST380"};
 		currentQuestion = -1;
 		AnswerCounter = 0;

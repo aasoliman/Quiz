@@ -11,7 +11,6 @@
     <TextView
         android:id="@+id/QuestionTextView"
         android:layout_width="wrap_content"
-        android:text="QuestionView"
         android:layout_height="wrap_content" />
 
     <Button
@@ -53,20 +52,11 @@
         android:text="Show Next Question" />
 
     <TextView
-        android:id="@+id/TextView01"
+        android:id="@+id/QuestionView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="QuestionView" />
-
-    <TextView
-        android:id="@+id/TextView02"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="QuestionView" />
+        android:layout_alignParentTop="true" />
 
     <EditText
         android:id="@+id/YourScore"
