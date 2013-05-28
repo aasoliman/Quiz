@@ -11,12 +11,14 @@ import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
-	private int currentQuestion; 
+	private int currentQuestion;
+	private int AnswerCounter;
 	private String [] questions; 
 	private String [] answers;   
 	private Button answerButton; 
 	private Button questionButton; 
-	private TextView questionView; 
+	private TextView questionView;
+	private EditText scoreText;
 	private TextView answerView; 
 	private EditText answerText;
 	@Override
@@ -27,14 +29,22 @@ public class MainActivity extends Activity {
 	}
 	
 	public void init()     {      
-		questions = new String[]{"What is the capital of Egypt?", "What class are you in right now?"};
+		questions = new String[]{" 1) What is the capital of Egypt?", " 2) What class are you in right now?"};
 		answers = new String[]{"Cairo","IST380"};
 		currentQuestion = -1;
+		AnswerCounter = 0;
+		
 		answerButton = (Button)findViewById(R.id.AnswerButton);
 		questionButton = (Button)findViewById(R.id.QuestionButton);
 		questionView = (TextView) findViewById(R.id.QuestionTextView);
 		answerView = (TextView) findViewById(R.id.AnswerTextView);
+		scoreText = (EditText) findViewById(R.id.ScoreText);		
 		answerText = (EditText) findViewById(R.id.AnswerText);
+		// Assigning value to the score
+		AnswerCounter = 0;
+		//Display the score
+		scoreText.setText(Integer.toString(AnswerCounter));
+		
 		answerButton.setOnClickListener(new OnClickListener()
 		{    @Override    
 			public void onClick(View v) {     
@@ -72,8 +82,22 @@ public boolean isCorrect(String answer)     {
  *     */   
 public void checkAnswer()     {    
 	String answer = answerText.getText().toString();  
-	if(isCorrect(answer))       answerView.setText("You're right!");  
-	else       answerView.setText("Sorry, the correct answer is "+answers[currentQuestion]);  
+	if(isCorrect(answer))       {
+		answerView.setText("You're right!");
+		//increasing the score value
+		AnswerCounter++;
+		
+	}
+	else       {
+		answerView.setText("Sorry, the correct answer is "+answers[currentQuestion]);
+		//decreasing the score counter
+		AnswerCounter--;
+		//checking if score less than 0
+		//if yes then assign Zero, so we will not get a negative result
+		if (AnswerCounter <0) 
+			AnswerCounter = 0;
+		}
+	scoreText.setText(Integer.toString(AnswerCounter));
 	} 
 		
 

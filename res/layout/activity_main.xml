@@ -52,4 +52,38 @@
         android:layout_below="@+id/AnswerTextView"
         android:text="Show Next Question" />
 
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="QuestionView" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="QuestionView" />
+
+    <EditText
+        android:id="@+id/YourScore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/QuestionButton"
+        android:layout_below="@+id/QuestionButton"
+        android:ems="10"
+        android:text="Your Score" />
+
+    <EditText
+        android:id="@+id/ScoreText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/YourScore"
+        android:layout_below="@+id/YourScore"
+        android:ems="10"
+        android:text="0" />
+
 </RelativeLayout>
