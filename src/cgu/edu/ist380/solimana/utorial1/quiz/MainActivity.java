@@ -54,6 +54,7 @@ public class MainActivity extends Activity {
 		@Override
 		public void onClick(View v) { 
 			showQuestion();      }});
+		showQuestion();
 		}        
 /*      * This method 
   * 1: increment currentQuestion index       
